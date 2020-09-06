@@ -45,4 +45,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 ## Project
-> CRA(React + typescript) + node-sass + styled-components
+> CRA(React + typescript) + node-sass + styled-components + react-router-dom
+- todo
+  + IE support
