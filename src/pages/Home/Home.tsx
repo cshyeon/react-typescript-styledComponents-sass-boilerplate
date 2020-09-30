@@ -41,6 +41,18 @@ const CardCollection = styled.section`
   width:100%;
   background-color: #e0ece4;
   color: black;
+
+  ${props => props.theme.media.desktop`
+    background-color: black;
+  `}
+
+  ${props => props.theme.media.tablet`
+    background-color: blue;
+  `}
+
+  ${props => props.theme.media.mobile`
+    background-color: red;
+  `}
 `
 
 const ItemCard = styled(Card)`
