@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 const DefaultButton = styled.button`
@@ -9,11 +9,11 @@ const DefaultButton = styled.button`
 
   border: 2px solid black;
   border-radius: 5px;
-  box-shadow: 0 1px 4px 0px grey; 
+  box-shadow: 0 1px 4px 0px grey;
 
-  background-color: ${props => props.theme.color.buttonBG};
+  background-color: ${(props) => props.theme.color.buttonBG};
 
-  transition: transform .1s;
+  transition: transform 0.1s;
 
   &:hover {
     border: 2px solid gray;
@@ -21,27 +21,26 @@ const DefaultButton = styled.button`
   &:active {
     transform: translate(0, 2px);
   }
-`
+`;
 
 type ButtonProps = {
   // All other props
-  [anything:string]: any;
-}
+  [anything: string]: any;
+};
 
-
-const Button: React.FC<ButtonProps> = ({children, onClick, ...restProps}) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick, ...restProps }) => {
   const buttonEl = useRef<HTMLButtonElement | null>(null);
 
   const clickListener = (e: any) => {
-    if(onClick) {
+    if (onClick) {
       onClick(e);
     }
-  }
+  };
   return (
     <DefaultButton ref={buttonEl} onClick={clickListener} {...restProps}>
       {children}
     </DefaultButton>
-  )
-}
+  );
+};
 
 export default Button;
