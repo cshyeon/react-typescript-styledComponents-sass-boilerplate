@@ -1,4 +1,4 @@
-import { createGlobalStyle, ThemedStyledInterface } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import styledReset from './StyledReset';
 import theme from 'styles/Theme';
 

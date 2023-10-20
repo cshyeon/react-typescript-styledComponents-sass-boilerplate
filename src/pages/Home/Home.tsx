@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Card, Button } from 'components';
 
 import {ReactComponent as HeartIcon} from '../../assets/images/icons/heart.svg';
@@ -90,7 +90,7 @@ const ItemCard = styled(Card)`
 
 
 
-const Home: React.FC<{}> = (props) => {
+const Home: React.FC<{}> = () => {
   return (
     <div className="home">
       <Header>

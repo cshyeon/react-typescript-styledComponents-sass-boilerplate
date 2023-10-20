@@ -1,6 +1,6 @@
 import React, {Fragment, useState } from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider, ThemeProviderProps } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from 'styles/StyledGlobal';
 import theme from 'styles/Theme';
@@ -11,7 +11,7 @@ import './index.scss'
 
 
 const Root: React.FC<{}> = () => {
-  const [appTheme, setAppTheme] = useState(theme);
+  const [appTheme] = useState(theme);
 
   return (
     <React.StrictMode>

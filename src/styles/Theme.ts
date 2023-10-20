@@ -1,4 +1,3 @@
-import { createContext } from 'react';
 import { css, CSSProp } from 'styled-components';
 
 const color = {

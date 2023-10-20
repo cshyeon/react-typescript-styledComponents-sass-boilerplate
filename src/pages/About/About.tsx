@@ -2,7 +2,7 @@ import React from 'react';
 
 const About: React.FC<{}> = () => {
   return (
-    <div>i'm about page</div>
+    <div>i am about page</div>
   )
 };
 

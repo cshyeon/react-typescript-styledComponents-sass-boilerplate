@@ -23,7 +23,7 @@ type CardProps = {
 }
 
 
-const Card: React.FC<CardProps> = ({children, onClick, ...restProps}) => {
+const Card: React.FC<CardProps> = ({children, ...restProps}) => {
 
   return (
     <DefaultCard {...restProps}>
