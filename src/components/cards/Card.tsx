@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const DefaultCard = styled.div`
   position: relative;
   width: 48%;
@@ -10,26 +9,20 @@ const DefaultCard = styled.div`
   font-family: inherit;
   font-weight: inherit;
 
-  box-shadow: 0 1px 4px 0px grey; 
+  box-shadow: 0 1px 4px 0px grey;
 
-  background-color: ${props => props.theme.color.cardBg};
+  background-color: ${(props) => props.theme.color.cardBg};
 
-  transition: transform .1s;
-`
+  transition: transform 0.1s;
+`;
 
 type CardProps = {
   // All other props
-  [anything:string]: any;
-}
+  [anything: string]: any;
+};
 
-
-const Card: React.FC<CardProps> = ({children, ...restProps}) => {
-
-  return (
-    <DefaultCard {...restProps}>
-      {children}
-    </DefaultCard>
-  )
-}
+const Card: React.FC<CardProps> = ({ children, ...restProps }) => {
+  return <DefaultCard {...restProps}>{children}</DefaultCard>;
+};
 
 export default Card;

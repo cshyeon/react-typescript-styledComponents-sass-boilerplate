@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Card, Button } from 'components';
 
-import {ReactComponent as HeartIcon} from '../../assets/images/icons/heart.svg';
+import { ReactComponent as HeartIcon } from '../../assets/images/icons/heart.svg';
 
 const HEADER_HEIGHT = 200;
 
@@ -20,7 +20,7 @@ const Title = styled.h1`
 `;
 
 const StartMenu = styled.div`
-  background-color: ${props => props.theme.color.sub};
+  background-color: ${(props) => props.theme.color.sub};
   padding: 20px 5px;
   // height: calc(100vh - ${HEADER_HEIGHT}px - 40px);
 `;
@@ -28,8 +28,7 @@ const StartMenu = styled.div`
 const StartButton = styled(Button)`
   width: 180px;
   padding: 12px 30px;
-`
-
+`;
 
 const CardCollection = styled.section`
   display: flex;
@@ -38,22 +37,22 @@ const CardCollection = styled.section`
 
   box-sizing: border-box;
   border: 1px solid purple;
-  width:100%;
+  width: 100%;
   background-color: #e0ece4;
   color: black;
 
-  ${props => props.theme.media.desktop`
+  ${(props) => props.theme.media.desktop`
     background-color: black;
   `}
 
-  ${props => props.theme.media.tablet`
+  ${(props) => props.theme.media.tablet`
     background-color: blue;
   `}
 
-  ${props => props.theme.media.mobile`
+  ${(props) => props.theme.media.mobile`
     background-color: red;
   `}
-`
+`;
 
 const ItemCard = styled(Card)`
   width: 23%;
@@ -69,11 +68,11 @@ const ItemCard = styled(Card)`
   }
   & .content {
     height: calc(380px - 50px - 50px);
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background-color: #06181f;
 
     .icon {
@@ -81,14 +80,11 @@ const ItemCard = styled(Card)`
       stroke: #ffffff;
       fill: red;
     }
-
   }
   & .footer {
     height: calc(380px - 50px - 280px);
   }
 `;
-
-
 
 const Home: React.FC<{}> = () => {
   return (
@@ -99,36 +95,26 @@ const Home: React.FC<{}> = () => {
       </Header>
 
       <StartMenu>
-        <StartButton onClick={() => window.location.href='/about'}>About</StartButton>
+        <StartButton onClick={() => (window.location.href = '/about')}>About</StartButton>
         <StartButton>Click button</StartButton>
       </StartMenu>
 
       <CardCollection>
         <ItemCard>
-          <div className="title">
-            title
-          </div>
+          <div className="title">title</div>
           <div className="content">
-            <HeartIcon className="icon heart"/>
+            <HeartIcon className="icon heart" />
           </div>
-          <div className="footer">
-            footer
-          </div>
+          <div className="footer">footer</div>
         </ItemCard>
         <ItemCard>
-          <div className="title">
-            title
-          </div>
-          <div className="content">
-          </div>
-          <div className="footer">
-            footer
-          </div>
+          <div className="title">title</div>
+          <div className="content"></div>
+          <div className="footer">footer</div>
         </ItemCard>
       </CardCollection>
     </div>
-    
-  )
+  );
 };
 
 export default Home;

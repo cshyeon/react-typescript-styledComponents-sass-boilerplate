@@ -5,12 +5,14 @@
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/prop-types": "off",
     "no-unused-vars": "off",
